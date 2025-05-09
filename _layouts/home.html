@@ -9,6 +9,13 @@ layout: default
   {% include home-intro.md %}
 </div>
 
+<div class="home-intro">
+  {% assign intro_content = site.static_files | where: "path", "home-intro.md" | first %}
+  {% if intro_content %}
+    {% assign content = intro_content.content | markdownify %}
+    {{ content }}
+  {% endif %}
+</div>
 
 <!-- <div class="posts">
   {% for post in paginator.posts %}
