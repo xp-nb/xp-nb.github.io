@@ -1,6 +1,6 @@
 ---
 layout: archive-taxonomies
-permalink: /tags/
-title: Tags
+permalink: /notes/
+title: 笔记仓库
 type: tags
 ---
