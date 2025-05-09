@@ -7,7 +7,7 @@
 
     <div class="container pure-g">
       {%- assign cover_bg_color = site.cover_bg_color | default: "rgb(40, 73, 77)" -%}
-      {%- assign cover_color    = site.cover_color    | default: "rgb(255, 255, 255)" -%}
+      {%- assign cover_color    = site.cover_color    | default: "#FFD700" -%}
       {%- assign cover_image    = site.cover_image -%}
       {%- if page.cover_bg_color -%}
         {%- assign cover_bg_color  = page.cover_bg_color -%}
@@ -20,14 +20,14 @@
       {%- endif -%}
 <!-- 优先使用页面级配置 (page.cover_*)，如果没有则使用全局配置 (site.cover_*)
 默认背景色为深青色，文字为白色 -->
-      <div class="sidebar-left pure-u-1 pure-u-md-3-8" style="background-color: {{ cover_bg_color }}; color: {{ cover_color}}; {% if cover_image %}background-image: url({{ cover_image | relative_url }});{% endif %}">
+      <div class="sidebar-left pure-u-1 pure-u-md-1-4" style="background-color: {{ cover_bg_color }}; color: {{ cover_color}}; {% if cover_image %}background-image: url({{ cover_image | relative_url }});{% endif %}">
         {%- include sidebar-left.html -%}
       </div>
 
-      <div class="content pure-u-1 pure-u-md-4-8">
+      <div class="content pure-u-1 pure-u-md-1-2">
         {%- include content.html -%}
       </div>
-      <div class="sidebar-right pure-u-1 pure-u-md-1-8">
+      <div class="sidebar-right pure-u-1 pure-u-md-1-4">
         {%- include sidebar-right.html -%}
       </div>
     </div>
