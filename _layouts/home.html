@@ -3,8 +3,14 @@ layout: default
 ---
 
 {% include home-header.html %}
+<!-- 引入 _includes/home-header.html 文件，显示基于 _data/archive.yml 配置的导航项。 -->
 
-<div class="posts">
+<div class="home-intro">
+  {% include home-intro.md %}
+</div>
+
+
+<!-- <div class="posts">
   {% for post in paginator.posts %}
   <section class="post-entry">
     <h2 class="post-title">
@@ -42,4 +48,4 @@ layout: default
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
-</div>
+</div> -->
